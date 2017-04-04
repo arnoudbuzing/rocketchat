@@ -1,0 +1,1461 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     65981,       1453]
+NotebookOptionsPosition[     62974,       1372]
+NotebookOutlinePosition[     63350,       1388]
+CellTagsIndexPosition[     63307,       1385]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["rocketchat", "Title",
+ CellChangeTimes->{{3.700324648725989*^9, 
+  3.7003246503979273`*^9}},ExpressionUUID->"cc8a1302-d1d1-4d0b-a50b-\
+700237aafe82"],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.700324636496632*^9, 
+  3.700324636791453*^9}},ExpressionUUID->"aa28dff1-35d9-489f-9807-\
+e25434f60e7d"],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<D:\\\\github\\\\rocketchat\\\\rocketchat.wl\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.700324615213689*^9, 
+  3.700324631598379*^9}},ExpressionUUID->"34ea3058-ee94-4bb3-bf5f-\
+ea155747359f"],
+
+Cell[CellGroupData[{
+
+Cell["test", "Subsubsection",
+ CellChangeTimes->{{3.700327222797222*^9, 
+  3.700327223173852*^9}},ExpressionUUID->"e275fa98-f6c2-4c4e-a3ea-\
+9a0804a51360"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"info", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.7003246404732003`*^9, 
+  3.7003246411828794`*^9}},ExpressionUUID->"71aa69bb-71b4-4f63-82b6-\
+89a81612bbcb"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"version\"\>", "\[Rule]", "\<\"0.32.0\"\>"}], ",", 
+   RowBox[{"\<\"build\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"date\"\>", "\[Rule]", "\<\"2016-05-30T22:48:40.289Z\"\>"}],
+       ",", 
+      RowBox[{"\<\"nodeVersion\"\>", "\[Rule]", "\<\"v0.10.40\"\>"}], ",", 
+      RowBox[{"\<\"arch\"\>", "\[Rule]", "\<\"x64\"\>"}], ",", 
+      RowBox[{"\<\"platform\"\>", "\[Rule]", "\<\"linux\"\>"}], ",", 
+      RowBox[{"\<\"osRelease\"\>", "\[Rule]", "\<\"3.13.0-40-generic\"\>"}], 
+      ",", 
+      RowBox[{"\<\"totalMemory\"\>", "\[Rule]", "63320141824"}], ",", 
+      RowBox[{"\<\"freeMemory\"\>", "\[Rule]", "42874040320"}], ",", 
+      RowBox[{"\<\"cpus\"\>", "\[Rule]", "32"}]}], "\[RightAssociation]"}]}], 
+   ",", 
+   RowBox[{"\<\"travis\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"buildNumber\"\>", "\[Rule]", "\<\"4568\"\>"}], ",", 
+      RowBox[{"\<\"branch\"\>", "\[Rule]", "\<\"0.32.0\"\>"}], ",", 
+      RowBox[{"\<\"tag\"\>", "\[Rule]", "\<\"0.32.0\"\>"}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"commit\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"hash\"\>", 
+       "\[Rule]", "\<\"32fa6ba28525a3e089d685844084ce7c337fe05c\"\>"}], ",", 
+      RowBox[{"\<\"date\"\>", 
+       "\[Rule]", "\<\"Mon May 30 19:37:21 2016 -0300\"\>"}], ",", 
+      RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"Gabriel Engel\"\>"}], ",", 
+      RowBox[{"\<\"subject\"\>", 
+       "\[Rule]", "\<\"version bump to 0.32.0\"\>"}], ",", 
+      RowBox[{"\<\"tag\"\>", "\[Rule]", "\<\"0.32.0\"\>"}], ",", 
+      RowBox[{"\<\"branch\"\>", "\[Rule]", "\<\"HEAD\"\>"}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"GraphicsMagick\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{"\<\"enabled\"\>", "\[Rule]", "False"}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"ImageMagick\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{"\<\"enabled\"\>", "\[Rule]", "False"}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.700324641744419*^9, 3.700325088268323*^9, 3.7003251554418063`*^9, 
+   3.700325401438794*^9, {3.7003288966330767`*^9, 3.7003289182526913`*^9}, 
+   3.700329154335605*^9, 3.7003292848905077`*^9, 3.700329612002846*^9, 
+   3.700329643494174*^9, 3.700329747081791*^9, 
+   3.700329921968153*^9},ExpressionUUID->"a854f334-a3a3-45e5-a3bb-\
+ce56864c0fb0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"login", "[", 
+  RowBox[{"\"\<arnoudb\>\"", ",", "password"}], "]"}]], "Input",
+ CellChangeTimes->{{3.700325089068904*^9, 
+  3.700325098534746*^9}},ExpressionUUID->"67fd135e-67d4-4bfa-870b-\
+dfcb0f6f55d4"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "\<\"success\"\>"}], ",", 
+   RowBox[{"\<\"data\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"authToken\"\>", 
+       "\[Rule]", "\<\"w_q1MxtPm9RWNYuWOOxmIb2pjRKmbUnVroYl-TdlkZN\"\>"}], 
+      ",", 
+      RowBox[{"\<\"userId\"\>", "\[Rule]", "\<\"y8xfbBqnMFwSjgy3Q\"\>"}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.700329286315525*^9, 3.7003296134519644`*^9, 
+  3.7003296578777113`*^9, 3.7003297481727057`*^9, 
+  3.7003299229540606`*^9},ExpressionUUID->"3bfbb624-0afa-4380-87d9-\
+97cb10e817cb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["rocketchat`Private`authToken"], "Input",
+ CellChangeTimes->{{3.7003292915590353`*^9, 
+  3.7003293008066053`*^9}},ExpressionUUID->"5ab6b290-664a-417f-84d3-\
+1f9c48c3c99e"],
+
+Cell[BoxData["\<\"w_q1MxtPm9RWNYuWOOxmIb2pjRKmbUnVroYl-TdlkZN\"\>"], "Output",
+ CellChangeTimes->{3.7003293013576326`*^9, 3.700329659338935*^9, 
+  3.7003297495360165`*^9, 
+  3.70032992413523*^9},ExpressionUUID->"f7617e3d-27a0-4ef0-b146-9c4515b3c08b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["rocketchat`Private`userId"], "Input",
+ CellChangeTimes->{{3.7003292915590353`*^9, 
+  3.700329309334653*^9}},ExpressionUUID->"16036584-19b4-4e44-87c8-\
+2b62afa41ccc"],
+
+Cell[BoxData["\<\"y8xfbBqnMFwSjgy3Q\"\>"], "Output",
+ CellChangeTimes->{3.7003293095831738`*^9, 3.700329660407959*^9, 
+  3.7003297503589554`*^9, 
+  3.7003299251205673`*^9},ExpressionUUID->"78b1b9af-9d07-4de9-8fad-\
+982a939594f2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"me", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.700329754607334*^9, 
+  3.7003297551267166`*^9}},ExpressionUUID->"6f1219b1-d7ed-495a-9fa3-\
+54da20ba749b"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"_id\"\>", "\[Rule]", "\<\"y8xfbBqnMFwSjgy3Q\"\>"}], ",", 
+   RowBox[{"\<\"name\"\>", "\[Rule]", "\<\"Arnoud Buzing\"\>"}], ",", 
+   RowBox[{"\<\"emails\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\<\"address\"\>", "\[Rule]", "\<\"arnoudb@wolfram.com\"\>"}], 
+       ",", 
+       RowBox[{"\<\"verified\"\>", "\[Rule]", "True"}]}], 
+      "\[RightAssociation]"}], "}"}]}], ",", 
+   RowBox[{"\<\"status\"\>", "\[Rule]", "\<\"away\"\>"}], ",", 
+   RowBox[{"\<\"statusConnection\"\>", "\[Rule]", "\<\"away\"\>"}], ",", 
+   RowBox[{"\<\"username\"\>", "\[Rule]", "\<\"arnoudb\"\>"}], ",", 
+   RowBox[{"\<\"utcOffset\"\>", "\[Rule]", 
+    RowBox[{"-", "5"}]}], ",", 
+   RowBox[{"\<\"active\"\>", "\[Rule]", "True"}], ",", 
+   RowBox[{"\<\"language\"\>", "\[Rule]", "\<\"en\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.700329755779887*^9, 
+  3.700329926133539*^9},ExpressionUUID->"65b99bc6-e174-4333-aa15-\
+e74749d02193"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"users", "[", "\"\<list\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7003299273267107`*^9, 
+  3.7003299304382257`*^9}},ExpressionUUID->"a62b47ac-c3a6-4b0f-b0a5-\
+97812d35110b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["HTTPResponse",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False}, 
+    PanelBox[
+     PaneSelectorBox[{False->GridBox[{
+        {
+         ButtonBox[
+          PaneSelectorBox[{False->
+           GraphicsBox[{
+             {RGBColor[0, 
+               NCache[
+                Rational[2, 3], 0.6666666666666666], 0], DiskBox[{0, 0}], 
+              InsetBox[
+               StyleBox["\<\"200\"\>",
+                StripOnInput->False,
+                LineColor->GrayLevel[1],
+                FrontFaceColor->GrayLevel[1],
+                BackFaceColor->GrayLevel[1],
+                GraphicsColor->GrayLevel[1],
+                FontSize->10,
+                FontWeight->Bold,
+                FontColor->GrayLevel[1]], Scaled[{0.53, 0.48}]]}},
+            Background->None,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, (3 CurrentValue["FontCapHeight"])/
+               AbsoluteCurrentValue[Magnification]}]], True->
+           GraphicsBox[{
+             {RGBColor[0, 
+               NCache[
+                Rational[4, 9], 0.4444444444444444], 0], DiskBox[{0, 0}], 
+              InsetBox[
+               StyleBox["\<\"200\"\>",
+                StripOnInput->False,
+                LineColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                FrontFaceColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                BackFaceColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                GraphicsColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                FontSize->10,
+                FontWeight->Bold,
+                FontColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]]], Scaled[{0.53, 0.48}]]}},
+            Background->None,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, (3 CurrentValue["FontCapHeight"])/
+               AbsoluteCurrentValue[Magnification]}]]}, Dynamic[
+            CurrentValue["MouseOver"]],
+           FrameMargins->0,
+           ImageSize->Automatic],
+          Appearance->"Frameless",
+          
+          ButtonFunction:>
+           With[{CloudObject`Private`file$ = 
+             FileNameJoin[{$TemporaryDirectory, 
+                StringJoin["HTTPResponse", 
+                 IntegerString[
+                  Hash[
+                   HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]], 36, 
+                  13], ".", 
+                 First[
+                  StringCases[
+                   First[
+                    CloudObject`Private`toContentTypeWithEncoding[
+                    HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]]], {
+                   StringExpression[StartOfString, "text/plain"] :> "txt", 
+                    StringExpression[
+                    Repeated[
+                    Except["/"]], "/", 
+                    Pattern[CloudObject`Private`a, 
+                    Repeated[WordCharacter]], 
+                    BlankNullSequence[]] :> CloudObject`Private`a}], 
+                  "txt"]]}]}, BinaryWrite[CloudObject`Private`file$, 
+              CloudObject`Private`HTTPProperty[
+               HTTPResponse[
+                ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                 "]], 
+                Association[
+                "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                   "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                   "Content-Type", "text/html; charset=utf-8"}, {
+                   "Transfer-Encoding", "chunked"}, {
+                   "Connection", "keep-alive"}, {"Vary", "Accept-Encoding"}, {
+                   "Access-Control-Allow-Origin", "*"}, {
+                   "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                 "Cookies" -> {}], CharacterEncoding -> Automatic], 
+               "BodyBytes"]]; Close[CloudObject`Private`file$]; 
+            SystemOpen[CloudObject`Private`file$]],
+          Evaluator->Automatic,
+          Method->"Preemptive"], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Status: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"OK\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Content type: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"text/html;charset=utf-8\"\>",
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+        {
+         ButtonBox[
+          PaneSelectorBox[{False->
+           GraphicsBox[{
+             {RGBColor[0, 
+               NCache[
+                Rational[2, 3], 0.6666666666666666], 0], DiskBox[{0, 0}], 
+              InsetBox[
+               StyleBox["\<\"200\"\>",
+                StripOnInput->False,
+                LineColor->GrayLevel[1],
+                FrontFaceColor->GrayLevel[1],
+                BackFaceColor->GrayLevel[1],
+                GraphicsColor->GrayLevel[1],
+                FontSize->10,
+                FontWeight->Bold,
+                FontColor->GrayLevel[1]], Scaled[{0.53, 0.48}]]}},
+            Background->None,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, (3 CurrentValue["FontCapHeight"])/
+               AbsoluteCurrentValue[Magnification]}]], True->
+           GraphicsBox[{
+             {RGBColor[0, 
+               NCache[
+                Rational[4, 9], 0.4444444444444444], 0], DiskBox[{0, 0}], 
+              InsetBox[
+               StyleBox["\<\"200\"\>",
+                StripOnInput->False,
+                LineColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                FrontFaceColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                BackFaceColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                GraphicsColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]],
+                FontSize->10,
+                FontWeight->Bold,
+                FontColor->RGBColor[
+                  Rational[2, 3], 
+                  Rational[2, 3], 
+                  Rational[2, 3]]], Scaled[{0.53, 0.48}]]}},
+            Background->None,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, (3 CurrentValue["FontCapHeight"])/
+               AbsoluteCurrentValue[Magnification]}]]}, Dynamic[
+            CurrentValue["MouseOver"]],
+           FrameMargins->0,
+           ImageSize->Automatic],
+          Appearance->"Frameless",
+          
+          ButtonFunction:>
+           With[{CloudObject`Private`file$ = 
+             FileNameJoin[{$TemporaryDirectory, 
+                StringJoin["HTTPResponse", 
+                 IntegerString[
+                  Hash[
+                   HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]], 36, 
+                  13], ".", 
+                 First[
+                  StringCases[
+                   First[
+                    CloudObject`Private`toContentTypeWithEncoding[
+                    HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]]], {
+                   StringExpression[StartOfString, "text/plain"] :> "txt", 
+                    StringExpression[
+                    Repeated[
+                    Except["/"]], "/", 
+                    Pattern[CloudObject`Private`a, 
+                    Repeated[WordCharacter]], 
+                    BlankNullSequence[]] :> CloudObject`Private`a}], 
+                  "txt"]]}]}, BinaryWrite[CloudObject`Private`file$, 
+              CloudObject`Private`HTTPProperty[
+               HTTPResponse[
+                ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                 "]], 
+                Association[
+                "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                   "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                   "Content-Type", "text/html; charset=utf-8"}, {
+                   "Transfer-Encoding", "chunked"}, {
+                   "Connection", "keep-alive"}, {"Vary", "Accept-Encoding"}, {
+                   "Access-Control-Allow-Origin", "*"}, {
+                   "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                 "Cookies" -> {}], CharacterEncoding -> Automatic], 
+               "BodyBytes"]]; Close[CloudObject`Private`file$]; 
+            SystemOpen[CloudObject`Private`file$]],
+          Evaluator->Automatic,
+          Method->"Preemptive"], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Status: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"OK\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Content type: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"text/html;charset=utf-8\"\>",
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+      Typeset`open$$],
+      ImageSize->Automatic],
+     BaselinePosition->Baseline],
+    DynamicModuleValues:>{}], "]"}],
+  HTTPResponse[
+   ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+    "]], 
+   Association[
+   "Headers" -> {{"Server", "nginx/1.10.1"}, {
+      "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+      "Content-Type", "text/html; charset=utf-8"}, {
+      "Transfer-Encoding", "chunked"}, {"Connection", "keep-alive"}, {
+      "Vary", "Accept-Encoding"}, {"Access-Control-Allow-Origin", "*"}, {
+      "X-Powered-By", "Express"}}, "StatusCode" -> 200, "Cookies" -> {}], 
+   CharacterEncoding -> Automatic],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Print",
+ CellChangeTimes->{
+  3.7003300734085236`*^9},ExpressionUUID->"41ab4dee-a438-47e7-b179-\
+08d0afad98a1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import","jsonhintposandchar",
+   "\"An error occurred near character \
+'\\!\\(\\*RowBox[{\\\"\\\\\\\"!\\\\\\\"\\\"}]\\)', at line \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\):\\!\\(\\*RowBox[{\\\"3\\\"}]\\)\"",2,24,4,
+   20055061160706361883,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7003300734485636`*^9},ExpressionUUID->"10fd38d0-d5e1-492c-973c-\
+3239d2debb28"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{
+  3.7003300734505625`*^9},ExpressionUUID->"2ba25e42-d214-4729-a492-\
+f7edc97652f9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   RowBox[{
+    TagBox["HTTPResponse",
+     "SummaryHead"], "[", 
+    DynamicModuleBox[{Typeset`open$$ = False}, 
+     PanelBox[
+      PaneSelectorBox[{False->GridBox[{
+         {
+          ButtonBox[
+           PaneSelectorBox[{False->
+            GraphicsBox[{
+              {RGBColor[0, 
+                NCache[
+                 Rational[2, 3], 0.6666666666666666], 0], DiskBox[{0, 0}], 
+               InsetBox[
+                StyleBox["\<\"200\"\>",
+                 StripOnInput->False,
+                 LineColor->GrayLevel[1],
+                 FrontFaceColor->GrayLevel[1],
+                 BackFaceColor->GrayLevel[1],
+                 GraphicsColor->GrayLevel[1],
+                 FontSize->10,
+                 FontWeight->Bold,
+                 FontColor->GrayLevel[1]], Scaled[{0.53, 0.48}]]}},
+             Background->None,
+             
+             ImageSize->
+              Dynamic[{
+               Automatic, (3 CurrentValue["FontCapHeight"])/
+                AbsoluteCurrentValue[Magnification]}]], True->
+            GraphicsBox[{
+              {RGBColor[0, 
+                NCache[
+                 Rational[4, 9], 0.4444444444444444], 0], DiskBox[{0, 0}], 
+               InsetBox[
+                StyleBox["\<\"200\"\>",
+                 StripOnInput->False,
+                 LineColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 FrontFaceColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 BackFaceColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 GraphicsColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 FontSize->10,
+                 FontWeight->Bold,
+                 FontColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]]], Scaled[{0.53, 0.48}]]}},
+             Background->None,
+             
+             ImageSize->
+              Dynamic[{
+               Automatic, (3 CurrentValue["FontCapHeight"])/
+                AbsoluteCurrentValue[Magnification]}]]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            FrameMargins->0,
+            ImageSize->Automatic],
+           Appearance->"Frameless",
+           
+           ButtonFunction:>
+            With[{CloudObject`Private`file$ = 
+              FileNameJoin[{$TemporaryDirectory, 
+                 StringJoin["HTTPResponse", 
+                  IntegerString[
+                   Hash[
+                    HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]], 36, 
+                   13], ".", 
+                  First[
+                   StringCases[
+                    First[
+                    CloudObject`Private`toContentTypeWithEncoding[
+                    HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]]], {
+                    StringExpression[StartOfString, "text/plain"] :> "txt", 
+                    StringExpression[
+                    Repeated[
+                    Except["/"]], "/", 
+                    Pattern[CloudObject`Private`a, 
+                    Repeated[WordCharacter]], 
+                    BlankNullSequence[]] :> CloudObject`Private`a}], 
+                   "txt"]]}]}, BinaryWrite[CloudObject`Private`file$, 
+               CloudObject`Private`HTTPProperty[
+                HTTPResponse[
+                 ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                  "]], 
+                 Association[
+                 "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                  "Cookies" -> {}], CharacterEncoding -> Automatic], 
+                "BodyBytes"]]; Close[CloudObject`Private`file$]; 
+             SystemOpen[CloudObject`Private`file$]],
+           Evaluator->Automatic,
+           Method->"Preemptive"], GridBox[{
+            {
+             RowBox[{
+              TagBox["\<\"Status: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"OK\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Content type: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"text/html;charset=utf-8\"\>",
+               "SummaryItem"]}]}
+           },
+           AutoDelete->False,
+           
+           BaseStyle->{
+            ShowStringCharacters -> False, NumberMarks -> False, 
+             PrintPrecision -> 3, ShowSyntaxStyles -> False},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+        },
+        AutoDelete->False,
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Rows" -> {{Top}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+         {
+          ButtonBox[
+           PaneSelectorBox[{False->
+            GraphicsBox[{
+              {RGBColor[0, 
+                NCache[
+                 Rational[2, 3], 0.6666666666666666], 0], DiskBox[{0, 0}], 
+               InsetBox[
+                StyleBox["\<\"200\"\>",
+                 StripOnInput->False,
+                 LineColor->GrayLevel[1],
+                 FrontFaceColor->GrayLevel[1],
+                 BackFaceColor->GrayLevel[1],
+                 GraphicsColor->GrayLevel[1],
+                 FontSize->10,
+                 FontWeight->Bold,
+                 FontColor->GrayLevel[1]], Scaled[{0.53, 0.48}]]}},
+             Background->None,
+             
+             ImageSize->
+              Dynamic[{
+               Automatic, (3 CurrentValue["FontCapHeight"])/
+                AbsoluteCurrentValue[Magnification]}]], True->
+            GraphicsBox[{
+              {RGBColor[0, 
+                NCache[
+                 Rational[4, 9], 0.4444444444444444], 0], DiskBox[{0, 0}], 
+               InsetBox[
+                StyleBox["\<\"200\"\>",
+                 StripOnInput->False,
+                 LineColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 FrontFaceColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 BackFaceColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 GraphicsColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]],
+                 FontSize->10,
+                 FontWeight->Bold,
+                 FontColor->RGBColor[
+                   Rational[2, 3], 
+                   Rational[2, 3], 
+                   Rational[2, 3]]], Scaled[{0.53, 0.48}]]}},
+             Background->None,
+             
+             ImageSize->
+              Dynamic[{
+               Automatic, (3 CurrentValue["FontCapHeight"])/
+                AbsoluteCurrentValue[Magnification]}]]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            FrameMargins->0,
+            ImageSize->Automatic],
+           Appearance->"Frameless",
+           
+           ButtonFunction:>
+            With[{CloudObject`Private`file$ = 
+              FileNameJoin[{$TemporaryDirectory, 
+                 StringJoin["HTTPResponse", 
+                  IntegerString[
+                   Hash[
+                    HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]], 36, 
+                   13], ".", 
+                  First[
+                   StringCases[
+                    First[
+                    CloudObject`Private`toContentTypeWithEncoding[
+                    HTTPResponse[
+                    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                    "]], 
+                    Association[
+                    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                    "Cookies" -> {}], CharacterEncoding -> Automatic]]], {
+                    StringExpression[StartOfString, "text/plain"] :> "txt", 
+                    StringExpression[
+                    Repeated[
+                    Except["/"]], "/", 
+                    Pattern[CloudObject`Private`a, 
+                    Repeated[WordCharacter]], 
+                    BlankNullSequence[]] :> CloudObject`Private`a}], 
+                   "txt"]]}]}, BinaryWrite[CloudObject`Private`file$, 
+               CloudObject`Private`HTTPProperty[
+                HTTPResponse[
+                 ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+                  "]], 
+                 Association[
+                 "Headers" -> {{"Server", "nginx/1.10.1"}, {
+                    "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+                    "Content-Type", "text/html; charset=utf-8"}, {
+                    "Transfer-Encoding", "chunked"}, {
+                    "Connection", "keep-alive"}, {
+                    "Vary", "Accept-Encoding"}, {
+                    "Access-Control-Allow-Origin", "*"}, {
+                    "X-Powered-By", "Express"}}, "StatusCode" -> 200, 
+                  "Cookies" -> {}], CharacterEncoding -> Automatic], 
+                "BodyBytes"]]; Close[CloudObject`Private`file$]; 
+             SystemOpen[CloudObject`Private`file$]],
+           Evaluator->Automatic,
+           Method->"Preemptive"], GridBox[{
+            {
+             RowBox[{
+              TagBox["\<\"Status: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"OK\"\>",
+               "SummaryItem"]}]},
+            {
+             RowBox[{
+              TagBox["\<\"Content type: \"\>",
+               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+              TagBox["\<\"text/html;charset=utf-8\"\>",
+               "SummaryItem"]}]}
+           },
+           AutoDelete->False,
+           
+           BaseStyle->{
+            ShowStringCharacters -> False, NumberMarks -> False, 
+             PrintPrecision -> 3, ShowSyntaxStyles -> False},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+        },
+        AutoDelete->False,
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Rows" -> {{Top}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+       Typeset`open$$],
+       ImageSize->Automatic],
+      BaselinePosition->Baseline],
+     DynamicModuleValues:>{}], "]"}],
+   HTTPResponse[
+    ByteArray[CompressedData["
+1:eJytV21v2zYQzj4uX/YXFA0BWqyy3t9WO0XrpluGrgncZOg+CRR5splIoibR
+jrJfv5NkO3JjBwowwLIt8rnnueMdj9JJLGbxD0dHR+VPR0fjk4+X0+u/r86V
+hczSs+Px5gcIOzs+HsekAmVRQjJRdRUHFGWc8vxOKSGdqJV8SKFaAEhVkQ8F
+TFQJtdRpVakKTUlVTdQoykCCKDUcjCJ1Q0UsBz9ubMcG9V0AAyDxHI8aDAJq
+AzMDYhPHN0Zo9q5jiBqGEiqxLClMZLkE9ex/8kYuIINWKrBsMM2A+W5shaGR
+uKEVJLbBmOsntgsWOIHrmInXLMXxuKIlL2Rf7JasSDeqnm3EonKZS55BREWe
+8HkUKRPlj6+XX0YFKSt4xYAKBjezi6nICpFDLl+pp/6HU8vqzGeQAiYB70/t
+9/j95/n1+eXs1DHMkTUym2Frit9XNx8+X0yjr+fX1xdffvu6hiOP/7EDzC4v
+r6Ob2ect0ULKomr/fsJPKegdSLogcnQv0qQk2YiKbEu/sY6u3l//Hl3Nzj9d
+fNsybVGEUoHBVtM20ilJU2AdqsnXGrOUYlkwIuEvKCsu8i0NwbwzO7BM6ts2
+8cFxAkqYlXhgutSitstCJzSTx5ifUM0gwQpZkDiFHqsZBAnxCabNCwmxzJjS
+BOIA+ajn+B5zQsd0yGHWqSiZWJEtY+IHLvplm77jU9OCmHixSWOfubYb+sy3
+qGGxJHAaA/+j+vr127HeFUW3gZ4tG6UqKZaki3FSgr7bvpc4LIid0A2I59kJ
+MQwb0OEw9D2bjm63++P2yfboyWK1Si5TOJu1eR5NMdFjvRs6/nGMFETB5GNB
+yom6lIkWqIq+nWlKRYN/lnw1UbGKJRap1riPG6u7W8fRNI+3W55naaAuOLrb
+Y9DMQ9hv2s17rdkeRHJMbc/m4nwCbI6hbsxykuGiYvnOMwT0kCd98g7FeCVL
+Hi8l5riHnKciJulTeInq+bwPhBzKfcgVh/tClH35e87kYsJgxSlo7c0bhedc
+cpJqFSUpTMw3SkZqni2zx4FlBWV711T0JBdPpbKKFEXKKWmC0K55ClORirKn
+/LPhOLZHvl+ip4YXGZn315Y395WeirnQs0oiQjMdp8ZrVOTzd6uJ/Txn1+4O
+EMaluMfgOsyoztJ9fG1fRp7DAT12/4zkPIFKbpr6jvfrOdwsIt8KPdrSRSlQ
+6B7iSooSNC4h2/C0XfJXXe8wo7kQ8xSa1qhv4DpDj3mq54ImcZ5nt3nO7mJe
+3JFYsBzPo1sOc2w534ly2lRdxf8FPJhI/rA5tFrH9Wo1/wVXZeMFnl4gKz0h
+q8ZshLN7wthhtFyvxmuXtWjqdx9jhNCdrB5gNUOrxmsoK0IHsVpBjddgVisY
+whp6dTg4/nBQ+J5Te85QSm93n5xo2mFiJ6idw/Hr/WJe02utyRCnbau2D2ds
+L3drMihzXm0eXuO93K1Jn1vTdgWqBbZOupTKUyWldUzZs1q11qH3ZgK/Rni1
+gl0HfVRrOhZoeOLThbYj6Pq16+/rJt9baC3ywGodpPeM2jMG0bfIl9L7Vu1b
+g+hb5Ivpvdr3htE3yJfSmyaeM6YzSGCNfbGEZWDPGZaBNfbFEt1pOUxiz8k6
+RMLFfuwOS/Qa+2KJAIMPBi5Uh+1JjPXuTXKMZ+EDPof+OGZ8pXCGROunnwL5
+tFQQ1j1cdS9qO4PoaGe2nqwKnuOTVzu+M1EClWbz2Itjeyet5ybt5yad5ybd
+3uTmz/oXn7v1LvSx3r1a/wdqR/7E
+     "]], 
+    Association[
+    "Headers" -> {{"Server", "nginx/1.10.1"}, {
+       "Date", "Tue, 04 Apr 2017 21:27:53 GMT"}, {
+       "Content-Type", "text/html; charset=utf-8"}, {
+       "Transfer-Encoding", "chunked"}, {"Connection", "keep-alive"}, {
+       "Vary", "Accept-Encoding"}, {"Access-Control-Allow-Origin", "*"}, {
+       "X-Powered-By", "Express"}}, "StatusCode" -> 200, "Cookies" -> {}], 
+    CharacterEncoding -> Automatic],
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False], "[", "\"\<Body\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.700330077991489*^9, 
+  3.700330080238496*^9}},ExpressionUUID->"6b06d0e0-760c-4dd7-9404-\
+0dd05ad4b89a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"im", "[", "\"\<list\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.700330530106885*^9, 
+  3.700330531725624*^9}},ExpressionUUID->"6fc87f60-1586-4694-a699-\
+749ffd690390"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import","jsonhintposandchar",
+   "\"An error occurred near character \
+'\\!\\(\\*RowBox[{\\\"\\\\\\\"!\\\\\\\"\\\"}]\\)', at line \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\):\\!\\(\\*RowBox[{\\\"3\\\"}]\\)\"",2,27,5,
+   20055061160706361883,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7003305324595385`*^9},ExpressionUUID->"e5bb3a21-a2ac-4f37-bb2e-\
+4d4b6f682dcd"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{
+  3.700330532461541*^9},ExpressionUUID->"1e0a5292-ff6d-4cf0-bdcb-\
+dba10db466e6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"logout", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.700329620029334*^9, 
+  3.7003296233410316`*^9}},ExpressionUUID->"80a6f6b3-1eb2-4f4c-bd45-\
+2bbeb047207b"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "\<\"success\"\>"}], ",", 
+   RowBox[{"\<\"data\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{"\<\"message\"\>", 
+      "\[Rule]", "\<\"You've been logged out!\"\>"}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.7003296211511307`*^9, 
+  3.700329661513076*^9},ExpressionUUID->"36b6640e-9695-4693-9009-\
+c520ab9bea8b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 997},
+WindowMargins->{{1912, Automatic}, {Automatic, -8}},
+Magnification:>1.4 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 155, 3, 141, "Title", "ExpressionUUID" -> \
+"cc8a1302-d1d1-4d0b-a50b-700237aafe82"],
+Cell[738, 27, 156, 3, 43, "Input", "ExpressionUUID" -> \
+"aa28dff1-35d9-489f-9807-e25434f60e7d"],
+Cell[897, 32, 235, 5, 43, "Input", "ExpressionUUID" -> \
+"34ea3058-ee94-4bb3-bf5f-ea155747359f"],
+Cell[CellGroupData[{
+Cell[1157, 41, 155, 3, 55, "Subsubsection", "ExpressionUUID" -> \
+"e275fa98-f6c2-4c4e-a3ea-9a0804a51360"],
+Cell[CellGroupData[{
+Cell[1337, 48, 182, 4, 43, "Input", "ExpressionUUID" -> \
+"71aa69bb-71b4-4f63-82b6-89a81612bbcb"],
+Cell[1522, 54, 2554, 52, 128, "Output", "ExpressionUUID" -> \
+"a854f334-a3a3-45e5-a3bb-ce56864c0fb0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4113, 111, 228, 5, 43, "Input", "ExpressionUUID" -> \
+"67fd135e-67d4-4bfa-870b-dfcb0f6f55d4"],
+Cell[4344, 118, 683, 15, 43, "Output", "ExpressionUUID" -> \
+"3bfbb624-0afa-4380-87d9-97cb10e817cb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5064, 138, 184, 3, 43, "Input", "ExpressionUUID" -> \
+"5ab6b290-664a-417f-84d3-1f9c48c3c99e"],
+Cell[5251, 143, 250, 3, 43, "Output", "ExpressionUUID" -> \
+"f7617e3d-27a0-4ef0-b146-9c4515b3c08b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5538, 151, 179, 3, 43, "Input", "ExpressionUUID" -> \
+"16036584-19b4-4e44-87c8-2b62afa41ccc"],
+Cell[5720, 156, 229, 4, 43, "Output", "ExpressionUUID" -> \
+"78b1b9af-9d07-4de9-8fad-982a939594f2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5986, 165, 178, 4, 43, "Input", "ExpressionUUID" -> \
+"6f1219b1-d7ed-495a-9fa3-54da20ba749b"],
+Cell[6167, 171, 1070, 23, 72, "Output", "ExpressionUUID" -> \
+"65b99bc6-e174-4333-aa15-e74749d02193"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7274, 199, 199, 4, 43, "Input", "ExpressionUUID" -> \
+"a62b47ac-c3a6-4b0f-b0a5-97812d35110b"],
+Cell[7476, 205, 26516, 546, 84, "Print", "ExpressionUUID" -> \
+"41ab4dee-a438-47e7-b179-08d0afad98a1"],
+Cell[33995, 753, 417, 10, 32, "Message", "ExpressionUUID" -> \
+"10fd38d0-d5e1-492c-973c-3239d2debb28"],
+Cell[34415, 765, 138, 3, 43, "Output", "ExpressionUUID" -> \
+"2ba25e42-d214-4729-a492-f7edc97652f9"]
+}, Open  ]],
+Cell[34568, 771, 26887, 549, 93, "Input", "ExpressionUUID" -> \
+"6b06d0e0-760c-4dd7-9404-0dd05ad4b89a"],
+Cell[CellGroupData[{
+Cell[61480, 1324, 192, 4, 43, "Input", "ExpressionUUID" -> \
+"6fc87f60-1586-4694-a699-749ffd690390"],
+Cell[61675, 1330, 417, 10, 32, "Message", "ExpressionUUID" -> \
+"e5bb3a21-a2ac-4f37-bb2e-4d4b6f682dcd"],
+Cell[62095, 1342, 136, 3, 43, "Output", "ExpressionUUID" -> \
+"1e0a5292-ff6d-4cf0-bdcb-dba10db466e6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62268, 1350, 182, 4, 43, "Input", "ExpressionUUID" -> \
+"80a6f6b3-1eb2-4f4c-bd45-2bbeb047207b"],
+Cell[62453, 1356, 481, 11, 43, "Output", "ExpressionUUID" -> \
+"36b6640e-9695-4693-9009-c520ab9bea8b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
