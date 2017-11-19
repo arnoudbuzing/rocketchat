@@ -16,6 +16,8 @@ userId = "";
 
 $RocketChatBaseUrl = "http://demo.rocketchat.com/api/v1";
 
+(* Implementation of the REST API located here: https://rocket.chat/docs/developer-guides/rest-api *)
+
 Options[RocketChat] = {
   "Command" -> "info",
   "Method" -> "GET",
@@ -56,13 +58,10 @@ logout[] := Module[{},
 
 me[] := RocketChat[ "Command"->"me"];
 
-(* users *)
-
 users["list"] := RocketChat[ "Command"->"users.list"]
-
-users["getAvatar", "userId"->userId_String] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> {"userId" -> userId}, "ReturnType" -> Automatic]
-
-users["getAvatar", "username"->username_String] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> {"username" -> username}, "ReturnType" -> Automatic]
+users["getPresence"] := RocketChat[ "Command"->"users.getPresence"]
+users["getPresence", query_List] := RockerChat[ "Command"->"users.getPresence", "Query" ->query]
+users["getAvatar", query_List] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> query, "ReturnType" -> Automatic]
 
 users["setAvatar", "image"->image_Image] := Module[{file},
   file = CreateTemporary[];
@@ -70,94 +69,8 @@ users["setAvatar", "image"->image_Image] := Module[{file},
   RocketChat[ "Command" -> "users.setAvatar", "Method"->"POST", "Body"->{"image"->File[file]}]
   ]
 
-(* im *)
+im["list"] := RocketChat[ "Command"->"im.list" ]
 
-in["list"] := RocketChat[ "Command"->"im.list" ]
-
-(*)
-im["list"] := Module[{request, response},
-  request = HTTPRequest[
-    URLBuild[{$RocketChatBaseUrl, "im.list"}], <|
-      Method -> "GET",
-      "Headers" -> { "X-Auth-Token" -> authToken, "X-User-Id" -> userId }
-    |>
-  ];
-  response = URLRead[request];
-  ImportString[response["Body"], "RawJSON"]
-  ]
-*)
 End[]
 
 EndPackage[]
-
-
-
-(*
-
-api = <|
-
- "info" -> "info", "auth" -> False, "method" -> "GET",
- "login" -> "login", "auth" -> False, "method" -> "POST", "data" ->
- "logout" -> "logout",
- "me" -> "me",
- "users.create" -> "users.create",
- "users.delete" -> "users.delete",
- "users.getPresence" -> "users.getPresence",
- "users.info" -> "users.info",
- "users.list" -> "users.list",
- "users.setAvatar" -> "users.setAvatar",
- "users.update" -> "users.update",
- "channels.addAll" -> "channels.addAll",
- "channels.archive" -> "channels.archive",
- "channels.cleanHistory" -> "channels.cleanHistory",
- "channels.close" -> "channels.close",
- "channels.create" -> "channels.create",
- "channels.getIntegrations" -> "channels.getIntegrations",
- "channels.history" -> "channels.history",
- "channels.info" -> "channels.info",
- "channels.invite" -> "channels.invite",
- "channels.kick" -> "channels.kick",
- "channels.leave" -> "channels.leave",
- "channels.list" -> "channels.list",
- "channels.list.joined" -> "channels.list.joined",
- "channels.open" -> "channels.open",
- "channels.rename" -> "channels.rename",
- "channels.setDescription" -> "channels.setDescription",
- "channels.setJoinCode" -> "channels.setJoinCode",
- "channels.setPurpose" -> "channels.setPurpose",
- "channels.setReadOnly" -> "channels.setReadOnly",
- "channels.setTopic" -> "channels.setTopic",
- "channels.setType" -> "channels.setType",
- "channels.unarchive" -> "channels.unarchive",
- "groups.archive" -> "groups.archive",
- "groups.close" -> "groups.close",
- "groups.create" -> "groups.create",
- "groups.history" -> "groups.history",
- "groups.info" -> "groups.info",
- "groups.invite" -> "groups.invite",
- "groups.kick" -> "groups.kick",
- "groups.leave" -> "groups.leave",
- "groups.list" -> "groups.list",
- "groups.open" -> "groups.open",
- "groups.rename" -> "groups.rename",
- "groups.setDescription" -> "groups.setDescription",
- "groups.setPurpose" -> "groups.setPurpose",
- "groups.setReadOnly" -> "groups.setReadOnly",
- "groups.setTopic" -> "groups.setTopic",
- "groups.setType" -> "groups.setType",
- "groups.unarchive" -> "groups.unarchive",
- "chat.delete" -> "chat.delete",
- "chat.postMessage" -> "chat.postMessage",
- "chat.update" -> "chat.update",
- "im.close" -> "im.close",
- "im.history" -> "im.history",
- "im.messages.others" -> "im.messages.others",
- "im.list" -> "im.list",
- "im.list.everyone" -> "im.list.everyone",
- "im.open" -> "im.open",
- "im.setTopic" -> "im.setTopic",
- "settings/:_id" -> "settings/:_id"
-
-|>;
-
-*)
