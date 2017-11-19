@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22135,        422]
-NotebookOptionsPosition[     19514,        368]
-NotebookOutlinePosition[     19870,        383]
-CellTagsIndexPosition[     19827,        380]
+NotebookDataLength[     23175,        435]
+NotebookOptionsPosition[     20561,        382]
+NotebookOutlinePosition[     20909,        396]
+CellTagsIndexPosition[     20866,        393]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -72,9 +72,11 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",CellChangeTimes->{{
    3.720025168676026*^9, 3.7200251867779484`*^9}, {3.7200253373417788`*^9, 
    3.7200253671282883`*^9}, 3.720025433775913*^9, 3.7200254721710944`*^9, 
    3.720025633527399*^9, {3.7200256702222385`*^9, 3.7200256934657516`*^9}, 
-   3.7200259047603326`*^9, 3.7200260393467903`*^9, 
-   3.7200261260290346`*^9},ExpressionUUID->"e7d2b359-cdfb-4e0e-9eb9-\
-6494b1aadcb7"]
+   3.7200259047603326`*^9, 3.7200260393467903`*^9, 3.7200261260290346`*^9, 
+   3.7200391179004974`*^9, {3.720039367217546*^9, 3.720039387424817*^9}, 
+   3.720039466073534*^9, 3.7200399472452154`*^9, 
+   3.7200402965740533`*^9},ExpressionUUID->"3a7b9419-44f2-45d1-bfcb-\
+f8227cea9be3"]
 }, Open  ]],
 
 Cell["Delete old paclet files:", "Text",CellChangeTimes->{{3.697546155880263*^9, 
@@ -116,9 +118,11 @@ Cell[BoxData[RowBox[{"{", "Null", "}"}]], "Output",CellChangeTimes->{{3.69754614
    3.720025186805501*^9}, {3.720025337371248*^9, 3.7200253671695223`*^9}, 
    3.7200254338035517`*^9, 3.7200254721937284`*^9, 3.7200256335503993`*^9, {
    3.720025670246385*^9, 3.720025693494752*^9}, 3.7200259047853327`*^9, 
-   3.7200260393761673`*^9, 
-   3.720026126053034*^9},ExpressionUUID->"11741026-4a3c-4727-abfb-\
-aa9d9919aba0"]
+   3.7200260393761673`*^9, 3.720026126053034*^9, 3.7200391179255004`*^9, {
+   3.7200393672455473`*^9, 3.720039387455166*^9}, 3.720039466104313*^9, 
+   3.720039947292632*^9, 
+   3.7200402966020527`*^9},ExpressionUUID->"a9044700-df49-48d6-8ad8-\
+2b00604ebae9"]
 }, Open  ]],
 
 Cell["Create the paclet:", "Text",
@@ -169,8 +173,10 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\\\\RocketChat-0.0.1.paclet\"\>"],\
    3.7200253373939085`*^9, 3.7200253671925306`*^9}, 3.72002543382555*^9, 
    3.7200254722193775`*^9, 3.7200256335723577`*^9, {3.720025670272667*^9, 
    3.720025693525793*^9}, 3.7200259048117523`*^9, 3.7200260394068966`*^9, 
-   3.7200261260770383`*^9},ExpressionUUID->"8205fa4e-1ffc-49a8-9dd1-\
-946badd1badc"]
+   3.7200261260770383`*^9, 3.7200391179504967`*^9, {3.7200393672745724`*^9, 
+   3.7200393874871416`*^9}, 3.7200394661373196`*^9, 3.7200399473251333`*^9, 
+   3.720040296629322*^9},ExpressionUUID->"0d0e52dc-666b-4886-888a-\
+c6ca8280bb3e"]
 }, Open  ]]
 }, Open  ]],
 
@@ -225,8 +231,10 @@ Cell[BoxData[RowBox[{"{", "Null", "}"}]], "Output",CellChangeTimes->{
    3.720025337558535*^9, 3.7200253673533463`*^9}, 3.7200254339909515`*^9, 
    3.72002547238239*^9, 3.720025633733574*^9, {3.7200256704320593`*^9, 
    3.7200256936858044`*^9}, 3.7200259049731274`*^9, 3.7200260395667763`*^9, 
-   3.7200261262370358`*^9},ExpressionUUID->"9c7984f0-af28-49f6-93bb-\
-b9b124aff72f"]
+   3.7200261262370358`*^9, 3.7200391181134996`*^9, {3.7200393674333267`*^9, 
+   3.7200393876476526`*^9}, 3.7200394663029957`*^9, 3.720039947490548*^9, 
+   3.7200402967899075`*^9},ExpressionUUID->"263ab9e6-6921-4cbf-ba88-\
+070bfb3e1e7c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -261,9 +269,11 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",CellChangeTimes->{
    3.7200251870297422`*^9}, {3.720025337598857*^9, 3.720025367391695*^9}, 
    3.72002543402596*^9, 3.720025472421124*^9, 3.7200256337715836`*^9, {
    3.7200256704688563`*^9, 3.7200256937243185`*^9}, 3.7200259050149355`*^9, 
-   3.720026039609774*^9, 
-   3.7200261262600355`*^9},ExpressionUUID->"1902e4d1-b68c-48f9-80d5-\
-660f8edc95be"]
+   3.720026039609774*^9, 3.7200261262600355`*^9, 3.7200391181514983`*^9, {
+   3.720039367474016*^9, 3.7200393876896515`*^9}, 3.720039466343995*^9, 
+   3.720039947530547*^9, 
+   3.7200402968335533`*^9},ExpressionUUID->"f260ac5d-a3d0-4926-809c-\
+69c95effb4f7"]
 }, Open  ]],
 
 Cell["Get the most current paclet file:", "Text",
@@ -310,9 +320,11 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\\\\RocketChat-0.0.1.paclet\"\>"],\
    3.7200251689555135`*^9, 3.720025187052653*^9}, {3.720025337620359*^9, 
    3.7200253674136934`*^9}, 3.72002543404895*^9, 3.720025472442581*^9, 
    3.7200256337940097`*^9, {3.720025670492357*^9, 3.7200256937483144`*^9}, 
-   3.7200259050419354`*^9, 3.7200260396337786`*^9, 
-   3.720026126283036*^9},ExpressionUUID->"fdf42849-7e95-40bf-8620-\
-b4e608b8f051"]
+   3.7200259050419354`*^9, 3.7200260396337786`*^9, 3.720026126283036*^9, 
+   3.7200391181745024`*^9, {3.7200393675042424`*^9, 3.7200393877185955`*^9}, 
+   3.7200394663712845`*^9, 3.7200399475575466`*^9, 
+   3.7200402968598003`*^9},ExpressionUUID->"e1912281-70f3-4227-9cab-\
+b6ad26bf40a0"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -359,16 +371,17 @@ Repository\\RocketChat-0.0.1"]]], "Output",
    3.720025169188509*^9, 3.720025187288657*^9}, {3.7200253378545713`*^9, 
    3.720025367648696*^9}, 3.7200254342828326`*^9, 3.7200254726763735`*^9, 
    3.720025634027554*^9, {3.7200256707228203`*^9, 3.720025693983963*^9}, 
-   3.7200259052753572`*^9, 3.7200260398667755`*^9, 
-   3.720026126514039*^9},ExpressionUUID->"93daac5b-8bf1-4d8a-90af-\
-3c7509f481bf"]
+   3.7200259052753572`*^9, 3.7200260398667755`*^9, 3.720026126514039*^9, 
+   3.7200391184075003`*^9, {3.7200393677392535`*^9, 3.720039387951289*^9}, 
+   3.7200394666052*^9, 3.72003994779155*^9, 
+   3.7200402970923076`*^9},ExpressionUUID->"2a08ee1a-b557-4364-8441-\
+dcc9cfedb335"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{775, 872},WindowMargins->{{
-  Automatic, -1155}, {-95, 
-   Automatic}},FrontEndVersion->"11.3 for Microsoft Windows (64-bit) \
+WindowSize->{775, 872},WindowMargins->{{75, Automatic}, {
+  26, Automatic}},FrontEndVersion->"11.3 for Microsoft Windows (64-bit) \
 (November 16, 2017)",StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -389,38 +402,38 @@ Cell[762, 29, 218, 4, 44, "Subsubsection",ExpressionUUID->"8d135a7e-7da0-4111-a5
 Cell[983, 35, 205, 2, 28, "Input",ExpressionUUID->"26f0ccd6-d629-4485-b0be-b5bc64ac2e00"],
 Cell[CellGroupData[{
 Cell[1213, 41, 272, 6, 28, "Input",ExpressionUUID->"54347c1d-698c-4ab5-956f-edf835090e57"],
-Cell[1488, 49, 2038, 27, 32, "Output",ExpressionUUID->"e7d2b359-cdfb-4e0e-9eb9-6494b1aadcb7"]
+Cell[1488, 49, 2186, 29, 32, "Output",ExpressionUUID->"3a7b9419-44f2-45d1-bfcb-f8227cea9be3"]
 }, Open  ]],
-Cell[3541, 79, 166, 2, 34, "Text",ExpressionUUID->"4d4abe8c-5213-444e-89ee-61310b5afae9"],
+Cell[3689, 81, 166, 2, 34, "Text",ExpressionUUID->"4d4abe8c-5213-444e-89ee-61310b5afae9"],
 Cell[CellGroupData[{
-Cell[3732, 85, 274, 6, 28, "Input",ExpressionUUID->"25506b1f-1d39-4ab8-8014-8d57be80c36c"],
-Cell[4009, 93, 1991, 27, 32, "Output",ExpressionUUID->"11741026-4a3c-4727-abfb-aa9d9919aba0"]
+Cell[3880, 87, 274, 6, 28, "Input",ExpressionUUID->"25506b1f-1d39-4ab8-8014-8d57be80c36c"],
+Cell[4157, 95, 2139, 29, 32, "Output",ExpressionUUID->"a9044700-df49-48d6-8ad8-2b00604ebae9"]
 }, Open  ]],
-Cell[6015, 123, 164, 3, 34, "Text",ExpressionUUID->"4e76e028-4e7d-407e-844b-d2a656b71767"],
+Cell[6311, 127, 164, 3, 34, "Text",ExpressionUUID->"4e76e028-4e7d-407e-844b-d2a656b71767"],
 Cell[CellGroupData[{
-Cell[6204, 130, 570, 11, 28, "Input",ExpressionUUID->"988118e7-f463-469d-83d6-458f45bb5ce7"],
-Cell[6777, 143, 2081, 29, 32, "Output",ExpressionUUID->"8205fa4e-1ffc-49a8-9dd1-946badd1badc"]
+Cell[6500, 134, 570, 11, 28, "Input",ExpressionUUID->"988118e7-f463-469d-83d6-458f45bb5ce7"],
+Cell[7073, 147, 2233, 31, 32, "Output",ExpressionUUID->"0d0e52dc-666b-4886-888a-c6ca8280bb3e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8907, 178, 235, 4, 44, "Subsubsection",ExpressionUUID->"5feba6c8-e612-4c82-822a-6a87ef27e912"],
-Cell[9145, 184, 164, 3, 34, "Text",ExpressionUUID->"71745029-4392-4c31-bc15-d6cabaa54e52"],
+Cell[9355, 184, 235, 4, 44, "Subsubsection",ExpressionUUID->"5feba6c8-e612-4c82-822a-6a87ef27e912"],
+Cell[9593, 190, 164, 3, 34, "Text",ExpressionUUID->"71745029-4392-4c31-bc15-d6cabaa54e52"],
 Cell[CellGroupData[{
-Cell[9334, 191, 474, 8, 28, "Input",ExpressionUUID->"ca57a76b-acd9-4de9-b25f-f375fc659384"],
-Cell[9811, 201, 1990, 27, 32, "Output",ExpressionUUID->"9c7984f0-af28-49f6-93bb-b9b124aff72f"]
+Cell[9782, 197, 474, 8, 28, "Input",ExpressionUUID->"ca57a76b-acd9-4de9-b25f-f375fc659384"],
+Cell[10259, 207, 2142, 29, 32, "Output",ExpressionUUID->"263ab9e6-6921-4cbf-ba88-070bfb3e1e7c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11838, 233, 197, 3, 28, "Input",ExpressionUUID->"a0677b90-49b0-446f-ab7c-69f726474fe0"],
-Cell[12038, 238, 1952, 27, 32, "Output",ExpressionUUID->"1902e4d1-b68c-48f9-80d5-660f8edc95be"]
+Cell[12438, 241, 197, 3, 28, "Input",ExpressionUUID->"a0677b90-49b0-446f-ab7c-69f726474fe0"],
+Cell[12638, 246, 2100, 29, 32, "Output",ExpressionUUID->"f260ac5d-a3d0-4926-809c-69c95effb4f7"]
 }, Open  ]],
-Cell[14005, 268, 177, 3, 34, "Text",ExpressionUUID->"128ae480-0e75-4033-9877-92f58a01ef59"],
+Cell[14753, 278, 177, 3, 34, "Text",ExpressionUUID->"128ae480-0e75-4033-9877-92f58a01ef59"],
 Cell[CellGroupData[{
-Cell[14207, 275, 326, 8, 28, "Input",ExpressionUUID->"afd6e4fc-ebdd-4aa7-8860-a58547b94a3d"],
-Cell[14536, 285, 2058, 29, 32, "Output",ExpressionUUID->"fdf42849-7e95-40bf-8620-b4e608b8f051"]
+Cell[14955, 285, 326, 8, 28, "Input",ExpressionUUID->"afd6e4fc-ebdd-4aa7-8860-a58547b94a3d"],
+Cell[15284, 295, 2212, 31, 32, "Output",ExpressionUUID->"e1912281-70f3-4227-9cab-b6ad26bf40a0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16631, 319, 298, 3, 28, "Input",ExpressionUUID->"1fa921a6-1530-4f1e-b644-d8c1d6053041"],
-Cell[16932, 324, 2542, 39, 32, "Output",ExpressionUUID->"93daac5b-8bf1-4d8a-90af-3c7509f481bf"]
+Cell[17533, 331, 298, 3, 28, "Input",ExpressionUUID->"1fa921a6-1530-4f1e-b644-d8c1d6053041"],
+Cell[17834, 336, 2687, 41, 32, "Output",ExpressionUUID->"2a08ee1a-b557-4364-8441-dcc9cfedb335"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

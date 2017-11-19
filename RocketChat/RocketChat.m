@@ -20,6 +20,7 @@ Options[RocketChat] = {
   "Command" -> "info",
   "Method" -> "GET",
   "Headers" -> {},
+  "Query" -> {},
   "Body" -> "",
   "ReturnType" -> "RawJSON"
 };
@@ -29,6 +30,7 @@ RocketChat[ OptionsPattern[] ] := Module[{request, response, result},
     URLBuild[{$RocketChatBaseUrl, OptionValue["Command"] }], <|
       Method -> OptionValue["Method"],
       "Headers" -> OptionValue["Headers"],
+      "Query" -> OptionValue["Query"],
       "Body" -> OptionValue["Body"]
     |>
     ];
@@ -56,42 +58,23 @@ me[] := RocketChat[ "Command"->"me"];
 
 (* users *)
 
-users["list"] := Module[{request, response},
-  request = HTTPRequest[
-    URLBuild[{$RocketChatBaseUrl, "users.list"}], <|
-      Method -> "GET",
-      "Headers" -> { "X-Auth-Token" -> authToken, "X-User-Id" -> userId }
-    |>
-  ];
-  response = URLRead[request];
-  ImportString[response["Body"], "RawJSON"]
+users["list"] := RocketChat[ "Command"->"users.list"]
+
+users["getAvatar", "userId"->userId_String] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> {"userId" -> userId}, "ReturnType" -> Automatic]
+
+users["getAvatar", "username"->username_String] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> {"username" -> username}, "ReturnType" -> Automatic]
+
+users["setAvatar", "image"->image_Image] := Module[{file},
+  file = CreateTemporary[];
+  Export[file,image,"PNG"];
+  RocketChat[ "Command" -> "users.setAvatar", "Method"->"POST", "Body"->{"image"->File[file]}]
   ]
 
-users["getAvatar", "userId" -> id_String] := Module[{request, response},
-  request = HTTPRequest[
-    URLBuild[{$RocketChatBaseUrl, "users.getAvatar"}], <|
-      Method -> "GET",
-      "Query" -> { "userId" -> id },
-      "Headers" -> { "X-Auth-Token" -> authToken, "X-User-Id" -> userId }
-    |>
-  ];
-  response = URLRead[request];
-  ImportString[response["Body"]]
-  ]
+(* im *)
 
-  users["getAvatar", "username" -> username_String] := Module[{request, response},
-    request = HTTPRequest[
-      URLBuild[{$RocketChatBaseUrl, "users.getAvatar"}], <|
-        Method -> "GET",
-        "Query" -> { "username" -> username },
-        "Headers" -> { "X-Auth-Token" -> authToken, "X-User-Id" -> userId }
-      |>
-    ];
-    response = URLRead[request];
-    ImportString[response["Body"]]
-    ]
+in["list"] := RocketChat[ "Command"->"im.list" ]
 
-
+(*)
 im["list"] := Module[{request, response},
   request = HTTPRequest[
     URLBuild[{$RocketChatBaseUrl, "im.list"}], <|
@@ -102,7 +85,7 @@ im["list"] := Module[{request, response},
   response = URLRead[request];
   ImportString[response["Body"], "RawJSON"]
   ]
-
+*)
 End[]
 
 EndPackage[]
