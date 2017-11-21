@@ -58,12 +58,12 @@ logout[] := Module[{},
 
 me[] := RocketChat[ "Command"->"me"];
 
-(* *)
+(* users *)
 
 users["list"] := RocketChat[ "Command"->"users.list"]
 users["info", query->List] := RocketChat[ "Command"->"users.info", "Query"->query]
 users["getPresence"] := RocketChat[ "Command"->"users.getPresence"]
-users["getPresence", query_List] := RocketChat[ "Command"->"users.getPresence", "Query" ->query]
+users["getPresence", query_List] := RockerChat[ "Command"->"users.getPresence", "Query" ->query]
 users["getAvatar", query_List] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> query, "ReturnType" -> Automatic]
 users["resetAvatar", query_List] := RocketChat[ "Command" -> "users.resetAvatar", "Query" -> query]
 
@@ -73,6 +73,7 @@ users["setAvatar", "image"->image_Image] := Module[{file},
   RocketChat[ "Command" -> "users.setAvatar", "Method"->"POST", "Body"->{"image"->File[file]}]
   ]
 
+(* im *)
 im["list"] := RocketChat[ "Command"->"im.list" ]
 
 End[]
