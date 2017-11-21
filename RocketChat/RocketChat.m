@@ -63,7 +63,7 @@ me[] := RocketChat[ "Command"->"me"];
 users["list"] := RocketChat[ "Command"->"users.list"]
 users["info", query->List] := RocketChat[ "Command"->"users.info", "Query"->query]
 users["getPresence"] := RocketChat[ "Command"->"users.getPresence"]
-users["getPresence", query_List] := RockerChat[ "Command"->"users.getPresence", "Query" ->query]
+users["getPresence", query_List] := RocketChat[ "Command"->"users.getPresence", "Query" ->query]
 users["getAvatar", query_List] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> query, "ReturnType" -> Automatic]
 users["resetAvatar", query_List] := RocketChat[ "Command" -> "users.resetAvatar", "Query" -> query]
 
