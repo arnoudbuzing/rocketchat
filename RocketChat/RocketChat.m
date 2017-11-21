@@ -8,6 +8,7 @@ logout::usage = "";
 me::usage = "";
 users::usage = "";
 im::usage = "";
+channels::usage = "";
 chat::usage = "";
 
 Begin["`Private`"];
@@ -75,7 +76,14 @@ users["setAvatar", "image"->image_Image] := Module[{file},
   ]
 
 (* im *)
+
 im["list"] := RocketChat[ "Command"->"im.list" ]
+
+(* channels *)
+
+channels["list"] := RocketChat["Command" -> "channels.list"]
+channels["info", query_List] := RocketChat["Command" -> "channels.info", "Query" -> query]
+channels["history", query_List] := RocketChat["Command" -> "channels.history",  "Query" -> query]
 
 (* chat *)
 
