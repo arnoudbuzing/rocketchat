@@ -8,6 +8,7 @@ logout::usage = "";
 me::usage = "";
 users::usage = "";
 im::usage = "";
+chat::usage = "";
 
 Begin["`Private`"];
 
@@ -61,7 +62,7 @@ me[] := RocketChat[ "Command"->"me"];
 (* users *)
 
 users["list"] := RocketChat[ "Command"->"users.list"]
-users["info", query->List] := RocketChat[ "Command"->"users.info", "Query"->query]
+users["info", query_List] := RocketChat[ "Command"->"users.info", "Query"->query]
 users["getPresence"] := RocketChat[ "Command"->"users.getPresence"]
 users["getPresence", query_List] := RockerChat[ "Command"->"users.getPresence", "Query" ->query]
 users["getAvatar", query_List] := RocketChat[ "Command" -> "users.getAvatar", "Query" -> query, "ReturnType" -> Automatic]
@@ -75,6 +76,16 @@ users["setAvatar", "image"->image_Image] := Module[{file},
 
 (* im *)
 im["list"] := RocketChat[ "Command"->"im.list" ]
+
+(* chat *)
+
+chat["postMessage", body_List] := RocketChat[
+  "Command" -> "chat.postMessage",
+  "Method" -> "POST",
+  "Headers" -> Join[ OptionValue[ RocketChat, "Headers"], {  "Content-type" -> "application/json" } ],
+  "Body" -> ExportString[ body, "JSON"]
+  ];
+
 
 End[]
 
