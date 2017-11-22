@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     24756,        471]
-NotebookOptionsPosition[     22141,        417]
-NotebookOutlinePosition[     22486,        432]
-CellTagsIndexPosition[     22443,        429]
+NotebookDataLength[     25236,        464]
+NotebookOptionsPosition[     22617,        410]
+NotebookOutlinePosition[     22967,        425]
+CellTagsIndexPosition[     22924,        422]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,24 +33,21 @@ Cell["build paclet", "Subsubsection",
   3.6975459800806236`*^9}},ExpressionUUID->"8d135a7e-7da0-4111-a521-\
 21aa39f8245b"],
 
-Cell[BoxData[
- RowBox[{"Needs", "[", "\"\<PacletManager`\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.6975455634084187`*^9, 
+Cell[BoxData[RowBox[{"Needs", "[", "\"\<PacletManager`\>\"", "]"}]], "Input",CellChangeTimes->{{3.6975455634084187`*^9, 
   3.6975455676496396`*^9}},ExpressionUUID->"26f0ccd6-d629-4485-b0be-\
 b5bc64ac2e00"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"pacletdirectory", "=", 
-  RowBox[{"SetDirectory", "[", 
-   RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}]], "Input",
+Cell[BoxData[RowBox[{
+ "pacletdirectory", "=", RowBox[{
+  "SetDirectory", "[", RowBox[{"NotebookDirectory", "[", "]"}], 
+   "]"}]}]], "Input",
  CellChangeTimes->{{3.6975455378256607`*^9, 
   3.6975455578574915`*^9}},ExpressionUUID->"54347c1d-698c-4ab5-956f-\
 edf835090e57"],
 
-Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",
- CellChangeTimes->{{3.6975455442231975`*^9, 3.6975455693769436`*^9}, 
+Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",CellChangeTimes->{{3.6975455442231975`*^9, 3.6975455693769436`*^9}, 
    3.6975460121306496`*^9, 3.7014461740460205`*^9, 3.7014462195846834`*^9, 
    3.701455718196032*^9, 3.7178660757229586`*^9, 3.7178668886465607`*^9, 
    3.717866987688408*^9, 3.7178674320746803`*^9, {3.717867651150397*^9, 
@@ -80,9 +77,10 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",
    3.720039466073534*^9, 3.7200399472452154`*^9, 3.7200402965740533`*^9, 
    3.7202640318168187`*^9, 3.7202642662819643`*^9, 3.7202642979461713`*^9, 
    3.720264655006274*^9, 3.720264706784528*^9, 3.72026485617944*^9, 
-   3.7202655716702347`*^9, 3.7202657185246696`*^9, 
-   3.72026581768402*^9},ExpressionUUID->"bdc3c1e2-6d73-4dc4-afb9-\
-0c2cc00c2ce2"]
+   3.7202655716702347`*^9, 3.7202657185246696`*^9, 3.72026581768402*^9, 
+   3.7202933762173796`*^9, 3.720293446913328*^9, 
+   3.720293660975565*^9},ExpressionUUID->"3d29c30d-1cae-448c-8dc8-\
+b64966c036a0"]
 }, Open  ]],
 
 Cell["Delete old paclet files:", "Text",CellChangeTimes->{{3.697546155880263*^9, 
@@ -91,17 +89,15 @@ Cell["Delete old paclet files:", "Text",CellChangeTimes->{{3.697546155880263*^9,
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"DeleteFile", "/@", 
-  RowBox[{"FileNames", "[", 
-   RowBox[{"\"\<*.paclet\>\"", ",", "pacletdirectory"}], "]"}]}]], "Input",
+Cell[BoxData[RowBox[{
+ "DeleteFile", "/@", RowBox[{
+  "FileNames", "[", RowBox[{"\"\<*.paclet\>\"", ",", "pacletdirectory"}], 
+   "]"}]}]], "Input",
  CellChangeTimes->{{3.697546135471151*^9, 
   3.697546147561078*^9}},ExpressionUUID->"25506b1f-1d39-4ab8-8014-\
 8d57be80c36c"],
 
-Cell[BoxData[
- RowBox[{"{", "Null", "}"}]], "Output",
- CellChangeTimes->{{3.6975461417477283`*^9, 3.6975461486717443`*^9}, 
+Cell[BoxData[RowBox[{"{", "Null", "}"}]], "Output",CellChangeTimes->{{3.6975461417477283`*^9, 3.6975461486717443`*^9}, 
    3.7014461754839535`*^9, 3.701446221090495*^9, 3.7014557199461956`*^9, 
    3.7178660775116715`*^9, 3.7178668898580456`*^9, 3.717866988187622*^9, 
    3.717867432092784*^9, {3.717867651169414*^9, 3.7178676766202683`*^9}, 
@@ -131,9 +127,10 @@ Cell[BoxData[
    3.720039947292632*^9, 3.7200402966020527`*^9, 3.7202640318288155`*^9, 
    3.7202642662978325`*^9, 3.7202642979633603`*^9, 3.720264655022274*^9, 
    3.7202647068005295`*^9, 3.7202648561934414`*^9, 3.7202655716896725`*^9, 
-   3.720265718540065*^9, 
-   3.720265817700021*^9},ExpressionUUID->"b4bcd963-d2c8-4d51-a2dd-\
-c80d413e6515"]
+   3.720265718540065*^9, 3.720265817700021*^9, 3.7202933762313814`*^9, 
+   3.720293446929329*^9, 
+   3.7202936609916735`*^9},ExpressionUUID->"e96f7b03-a847-4003-bb19-\
+e3a7df37708f"]
 }, Open  ]],
 
 Cell["Create the paclet:", "Text",
@@ -143,13 +140,12 @@ d2a656b71767"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"paclet", "=", 
-  RowBox[{"PackPaclet", "[", 
-   RowBox[{"FileNameJoin", "[", 
-    RowBox[{"{", 
-     RowBox[{"pacletdirectory", ",", "\"\<RocketChat\>\""}], "}"}], "]"}], 
-   "]"}]}]], "Input",
+Cell[BoxData[RowBox[{
+ "paclet", "=", RowBox[{
+  "PackPaclet", "[", RowBox[{
+   "FileNameJoin", "[", RowBox[{
+    "{", RowBox[{"pacletdirectory", ",", "\"\<RocketChat\>\""}], "}"}], "]"}],
+    "]"}]}]], "Input",
  CellChangeTimes->{{3.697545560232503*^9, 3.697545604993617*^9}, {
    3.7178660810720797`*^9, 3.7178660842801523`*^9}, 3.7185481798598695`*^9, {
    3.719246139606555*^9, 3.7192461409768047`*^9}, {3.7196596556853476`*^9, 
@@ -190,8 +186,9 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\\\\RocketChat-0.0.1.paclet\"\>"],\
    3.720040296629322*^9, 3.7202640327238193`*^9, 3.7202642663338346`*^9, 
    3.7202642980024443`*^9, 3.720264655059275*^9, 3.720264706836531*^9, 
    3.7202648562304387`*^9, 3.7202655717256765`*^9, 3.720265718575326*^9, 
-   3.720265817737239*^9},ExpressionUUID->"7626820b-2cb2-41e5-952f-\
-dab32b69fe76"]
+   3.720265817737239*^9, 3.7202933764913807`*^9, 3.7202934469643283`*^9, 
+   3.720293661024979*^9},ExpressionUUID->"0e44e943-db00-45e1-a11a-\
+182fca2eebb0"]
 }, Open  ]]
 }, Open  ]],
 
@@ -210,9 +207,9 @@ d6cabaa54e52"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"PacletUninstall", "/@", 
-  RowBox[{"PacletFind", "[", "\"\<RocketChat\>\"", "]"}]}]], "Input",
+Cell[BoxData[RowBox[{
+ "PacletUninstall", "/@", RowBox[{
+  "PacletFind", "[", "\"\<RocketChat\>\"", "]"}]}]], "Input",
  CellChangeTimes->{{3.697544735557576*^9, 3.6975447578656173`*^9}, {
    3.6975456437937756`*^9, 3.697545646432991*^9}, {3.7178660912868605`*^9, 
    3.7178660943912554`*^9}, 3.7185481865392203`*^9, 3.7192461504463186`*^9, {
@@ -220,9 +217,7 @@ Cell[BoxData[
    3.7200225750495434`*^9},ExpressionUUID->"ca57a76b-acd9-4de9-b25f-\
 f375fc659384"],
 
-Cell[BoxData[
- RowBox[{"{", "Null", "}"}]], "Output",
- CellChangeTimes->{
+Cell[BoxData[RowBox[{"{", "Null", "}"}]], "Output",CellChangeTimes->{
   3.697544758391574*^9, {3.697545660449895*^9, 3.6975456837940626`*^9}, 
    3.697546225105091*^9, 3.7014462318720226`*^9, 3.701455731242834*^9, 
    3.7178660999926186`*^9, 3.7178668929123287`*^9, 3.717866994044385*^9, 
@@ -253,20 +248,19 @@ Cell[BoxData[
    3.7200402967899075`*^9, 3.7202640328998213`*^9, 3.7202642664978347`*^9, 
    3.7202642981639347`*^9, 3.720264655223878*^9, 3.7202647069955273`*^9, 
    3.7202648563964453`*^9, 3.720265571887678*^9, 3.720265718736333*^9, 
-   3.720265817902049*^9},ExpressionUUID->"591d5587-5171-4c18-a8a7-\
-cdf98476f27a"]
+   3.720265817902049*^9, 3.7202933767913876`*^9, 3.7202934471223316`*^9, 
+   3.7202936611894965`*^9},ExpressionUUID->"37f7bcc3-5b89-41b5-b71e-\
+ff40e1e945a7"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"pacletdirectory", "=", 
-  RowBox[{"SetDirectory", "[", 
-   RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}]], "Input",ExpressionUUID->\
-"a0677b90-49b0-446f-ab7c-69f726474fe0"],
+Cell[BoxData[RowBox[{
+ "pacletdirectory", "=", RowBox[{
+  "SetDirectory", "[", RowBox[{"NotebookDirectory", "[", "]"}], 
+   "]"}]}]], "Input",ExpressionUUID->"a0677b90-49b0-446f-ab7c-69f726474fe0"],
 
-Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",
- CellChangeTimes->{
+Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",CellChangeTimes->{
   3.6975457367749877`*^9, 3.6975462297510605`*^9, 3.7014462331209755`*^9, 
    3.7014557328823247`*^9, 3.7178661020345736`*^9, 3.7178668936902847`*^9, 
    3.7178669948321733`*^9, 3.7178674352874765`*^9, {3.7178676529954977`*^9, 
@@ -296,9 +290,10 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\"\>"], "Output",
    3.720039947530547*^9, 3.7200402968335533`*^9, 3.72026403293682*^9, 
    3.720264266529808*^9, 3.720264298197937*^9, 3.720264655255891*^9, 
    3.7202647070269213`*^9, 3.720264856429442*^9, 3.720265571920673*^9, 
-   3.7202657187693353`*^9, 
-   3.7202658179350586`*^9},ExpressionUUID->"959fad77-4d12-4826-aabd-\
-b9c00a70701a"]
+   3.7202657187693353`*^9, 3.7202658179350586`*^9, 3.7202933768193955`*^9, 
+   3.7202934471363287`*^9, 
+   3.7202936612184978`*^9},ExpressionUUID->"8459b39d-38bd-444f-b5a2-\
+ec8b621c01fa"]
 }, Open  ]],
 
 Cell["Get the most current paclet file:", "Text",
@@ -308,12 +303,11 @@ Cell["Get the most current paclet file:", "Text",
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"paclet", "=", 
-  RowBox[{"Last", "@", 
-   RowBox[{"Sort", "@", 
-    RowBox[{"FileNames", "[", 
-     RowBox[{"\"\<*.paclet\>\"", ",", "pacletdirectory"}], 
+Cell[BoxData[RowBox[{
+ "paclet", "=", RowBox[{
+  "Last", "@", RowBox[{
+   "Sort", "@", RowBox[{
+    "FileNames", "[", RowBox[{"\"\<*.paclet\>\"", ",", "pacletdirectory"}], 
      "]"}]}]}]}]], "Input",
  CellChangeTimes->{{3.697545743346425*^9, 
   3.697545795545331*^9}},ExpressionUUID->"afd6e4fc-ebdd-4aa7-8860-\
@@ -351,23 +345,21 @@ Cell[BoxData["\<\"D:\\\\github\\\\rocketchat\\\\RocketChat-0.0.1.paclet\"\>"],\
    3.7200394663712845`*^9, 3.7200399475575466`*^9, 3.7200402968598003`*^9, 
    3.720264032946821*^9, 3.720264266542817*^9, 3.7202642982139373`*^9, 
    3.7202646552708797`*^9, 3.7202647070419207`*^9, 3.7202648564444413`*^9, 
-   3.7202655719409122`*^9, 3.7202657187843285`*^9, 
-   3.7202658179510536`*^9},ExpressionUUID->"ef4fde34-3735-4943-ac09-\
-b60855e404aa"]
+   3.7202655719409122`*^9, 3.7202657187843285`*^9, 3.7202658179510536`*^9, 
+   3.720293376834385*^9, 3.72029344715033*^9, 
+   3.7202936612335043`*^9},ExpressionUUID->"5da94003-85e3-43a5-b101-\
+c5656fe7372e"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"PacletInstall", "[", "paclet", "]"}]], "Input",
- CellChangeTimes->{{3.6975447599719725`*^9, 3.6975447651630864`*^9}, {
+Cell[BoxData[RowBox[{"PacletInstall", "[", "paclet", "]"}]], "Input",CellChangeTimes->{{3.6975447599719725`*^9, 3.6975447651630864`*^9}, {
   3.6975447955538425`*^9, 3.6975447975904627`*^9}, {3.697545833497943*^9, 
   3.6975458340815983`*^9}},ExpressionUUID->"1fa921a6-1530-4f1e-b644-\
 d8c1d6053041"],
 
 Cell[BoxData[
- InterpretationBox[
-  RowBox[{
+ InterpretationBox[RowBox[{
   "Paclet", "[", "\<\"RocketChat\"\>", ",", "\<\"0.0.1\"\>", ",", "<>", "]"}],
   PacletManager`Paclet[
   "Name" -> "RocketChat", "Description" -> 
@@ -408,17 +400,18 @@ Repository\\RocketChat-0.0.1"]]], "Output",
    3.7200394666052*^9, 3.72003994779155*^9, 3.7200402970923076`*^9, 
    3.720264033192825*^9, 3.7202642667722187`*^9, 3.7202642984440966`*^9, 
    3.7202646554972363`*^9, 3.7202647072729225`*^9, 3.7202648566734447`*^9, 
-   3.7202655721679153`*^9, 3.7202657190134487`*^9, 
-   3.720265818177559*^9},ExpressionUUID->"4a2a7e3e-df6e-40d4-bee1-\
-474afc3f40c6"]
+   3.7202655721679153`*^9, 3.7202657190134487`*^9, 3.720265818177559*^9, 
+   3.720293377087389*^9, 3.720293447378332*^9, 
+   3.720293661466496*^9},ExpressionUUID->"b1ad2dc9-7fba-4f5e-bbaf-\
+da20422717c9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{775, 872},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{775, 872},WindowMargins->{{0, Automatic}, {
+  Automatic, 
+   0}},FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (November 19, \
+2017)",StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
 
@@ -435,41 +428,41 @@ Cell[CellGroupData[{
 Cell[580, 22, 157, 3, 96, "Title",ExpressionUUID->"62505531-4661-480c-a724-a8eac360a051"],
 Cell[CellGroupData[{
 Cell[762, 29, 218, 4, 44, "Subsubsection",ExpressionUUID->"8d135a7e-7da0-4111-a521-21aa39f8245b"],
-Cell[983, 35, 209, 4, 28, "Input",ExpressionUUID->"26f0ccd6-d629-4485-b0be-b5bc64ac2e00"],
+Cell[983, 35, 205, 2, 28, "Input",ExpressionUUID->"26f0ccd6-d629-4485-b0be-b5bc64ac2e00"],
 Cell[CellGroupData[{
-Cell[1217, 43, 272, 6, 28, "Input",ExpressionUUID->"54347c1d-698c-4ab5-956f-edf835090e57"],
-Cell[1492, 51, 2406, 33, 32, "Output",ExpressionUUID->"bdc3c1e2-6d73-4dc4-afb9-0c2cc00c2ce2"]
+Cell[1213, 41, 272, 6, 28, "Input",ExpressionUUID->"54347c1d-698c-4ab5-956f-edf835090e57"],
+Cell[1488, 49, 2476, 33, 32, "Output",ExpressionUUID->"3d29c30d-1cae-448c-8dc8-b64966c036a0"]
 }, Open  ]],
-Cell[3913, 87, 166, 2, 34, "Text",ExpressionUUID->"4d4abe8c-5213-444e-89ee-61310b5afae9"],
+Cell[3979, 85, 166, 2, 34, "Text",ExpressionUUID->"4d4abe8c-5213-444e-89ee-61310b5afae9"],
 Cell[CellGroupData[{
-Cell[4104, 93, 274, 6, 28, "Input",ExpressionUUID->"25506b1f-1d39-4ab8-8014-8d57be80c36c"],
-Cell[4381, 101, 2365, 34, 32, "Output",ExpressionUUID->"b4bcd963-d2c8-4d51-a2dd-c80d413e6515"]
+Cell[4170, 91, 274, 6, 28, "Input",ExpressionUUID->"25506b1f-1d39-4ab8-8014-8d57be80c36c"],
+Cell[4447, 99, 2435, 33, 32, "Output",ExpressionUUID->"e96f7b03-a847-4003-bb19-e3a7df37708f"]
 }, Open  ]],
-Cell[6761, 138, 164, 3, 34, "Text",ExpressionUUID->"4e76e028-4e7d-407e-844b-d2a656b71767"],
+Cell[6897, 135, 164, 3, 34, "Text",ExpressionUUID->"4e76e028-4e7d-407e-844b-d2a656b71767"],
 Cell[CellGroupData[{
-Cell[6950, 145, 576, 12, 28, "Input",ExpressionUUID->"988118e7-f463-469d-83d6-458f45bb5ce7"],
-Cell[7529, 159, 2453, 34, 32, "Output",ExpressionUUID->"7626820b-2cb2-41e5-952f-dab32b69fe76"]
+Cell[7086, 142, 570, 11, 28, "Input",ExpressionUUID->"988118e7-f463-469d-83d6-458f45bb5ce7"],
+Cell[7659, 155, 2527, 35, 32, "Output",ExpressionUUID->"0e44e943-db00-45e1-a11a-182fca2eebb0"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10031, 199, 235, 4, 44, "Subsubsection",ExpressionUUID->"5feba6c8-e612-4c82-822a-6a87ef27e912"],
-Cell[10269, 205, 164, 3, 34, "Text",ExpressionUUID->"71745029-4392-4c31-bc15-d6cabaa54e52"],
+Cell[10235, 196, 235, 4, 44, "Subsubsection",ExpressionUUID->"5feba6c8-e612-4c82-822a-6a87ef27e912"],
+Cell[10473, 202, 164, 3, 34, "Text",ExpressionUUID->"71745029-4392-4c31-bc15-d6cabaa54e52"],
 Cell[CellGroupData[{
-Cell[10458, 212, 474, 8, 28, "Input",ExpressionUUID->"ca57a76b-acd9-4de9-b25f-f375fc659384"],
-Cell[10935, 222, 2366, 34, 32, "Output",ExpressionUUID->"591d5587-5171-4c18-a8a7-cdf98476f27a"]
+Cell[10662, 209, 474, 8, 28, "Input",ExpressionUUID->"ca57a76b-acd9-4de9-b25f-f375fc659384"],
+Cell[11139, 219, 2438, 33, 32, "Output",ExpressionUUID->"37f7bcc3-5b89-41b5-b71e-ff40e1e945a7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13338, 261, 199, 4, 28, "Input",ExpressionUUID->"a0677b90-49b0-446f-ab7c-69f726474fe0"],
-Cell[13540, 267, 2317, 33, 32, "Output",ExpressionUUID->"959fad77-4d12-4826-aabd-b9c00a70701a"]
+Cell[13614, 257, 197, 3, 28, "Input",ExpressionUUID->"a0677b90-49b0-446f-ab7c-69f726474fe0"],
+Cell[13814, 262, 2391, 33, 32, "Output",ExpressionUUID->"8459b39d-38bd-444f-b5a2-ec8b621c01fa"]
 }, Open  ]],
-Cell[15872, 303, 177, 3, 34, "Text",ExpressionUUID->"128ae480-0e75-4033-9877-92f58a01ef59"],
+Cell[16220, 298, 177, 3, 34, "Text",ExpressionUUID->"128ae480-0e75-4033-9877-92f58a01ef59"],
 Cell[CellGroupData[{
-Cell[16074, 310, 332, 9, 28, "Input",ExpressionUUID->"afd6e4fc-ebdd-4aa7-8860-a58547b94a3d"],
-Cell[16409, 321, 2436, 34, 32, "Output",ExpressionUUID->"ef4fde34-3735-4943-ac09-b60855e404aa"]
+Cell[16422, 305, 326, 8, 28, "Input",ExpressionUUID->"afd6e4fc-ebdd-4aa7-8860-a58547b94a3d"],
+Cell[16751, 315, 2507, 35, 32, "Output",ExpressionUUID->"5da94003-85e3-43a5-b101-c5656fe7372e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18882, 360, 302, 5, 28, "Input",ExpressionUUID->"1fa921a6-1530-4f1e-b644-d8c1d6053041"],
-Cell[19187, 367, 2914, 45, 32, "Output",ExpressionUUID->"4a2a7e3e-df6e-40d4-bee1-474afc3f40c6"]
+Cell[19295, 355, 298, 3, 28, "Input",ExpressionUUID->"1fa921a6-1530-4f1e-b644-d8c1d6053041"],
+Cell[19596, 360, 2981, 45, 32, "Output",ExpressionUUID->"b1ad2dc9-7fba-4f5e-bbaf-da20422717c9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
